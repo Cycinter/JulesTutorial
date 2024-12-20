@@ -36,6 +36,8 @@ https://github.com/Cycinter/JulesTutorial/blob/master/HugoBlog/hugo.yaml
 查看hugo版本
 hugo version
 
+git下载
+https://git-scm.com/
 git下
 
 更改至博客路径
