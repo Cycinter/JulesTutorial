@@ -1,63 +1,66 @@
-下载安装VSCode
+
+Download and Install VSCode:
 https://code.visualstudio.com/
 
-powershell scoop 安装hugo
+Install Hugo with PowerShell and Scoop:
 scoop install hugo-extended
 
-创建hugo本地博客
+Create a Local Hugo Blog:
 cd E:\OneDrive\blog
 hugo new site jinspr
 cd jinspr
 git init
 
-选主题
+Select a Theme:
 https://themes.gohugo.io/
-安装主题
+
+Install the Theme:
 cd themes
 git clone https://github.com/g1eny0ung/hugo-theme-dream.git dream
 
-我的主题
+My Theme:
 git submodule add https://github.com/cycinter/hugo-theme-dream.git themes/dream
 
-toml调试
+Configure config.toml:
 theme = 'dream'
 
-查看站点
+Preview the Site:
 hugo server
 
-发布文章
-hugo new content posts/test1.md
+Create and Preview a Post:
+hugo new content/posts/test1.md
 hugo server -D
 hugo server
 
-部署工作流文件,从以下复制
+Deploy Workflow File:
+Copy the workflow file from:
 https://github.com/Cycinter/JulesTutorial/blob/master/HugoBlog/hugo.yaml
 
-查看hugo版本
+Check Hugo Version:
 hugo version
 
-git下载
+Download Git:
 https://git-scm.com/
-git下
 
-更改至博客路径
+In Git:
+Navigate to the Blog Directory:
 cd /e/OneDrive/blog/jinspr/
 
-默认分支与ymal文件相同，设为main
+Set the Default Branch to Match the YAML File (main):
 git branch -M main
 
-对接远程库
+Connect to Remote Repositories:
 git remote add source https://github.com/Cycinter/myblog.git
 git remote add pages https://github.com/Cycinter/cycinter.github.io.git
 
-验证远程库配置
+Verify Remote Repository Configuration:
 git remote -v
 
-添加文件到暂存区
+Add Files to the Staging Area:
 git add .
 
-将暂存区中的更改提交到本地的仓库，并添加消息，引号中消息根据内容自定义
+Commit Changes to the Local Repository with a Custom Message:
 git commit -m "Initial commit with Hugo site"
 
-上传远程代码并合并，上传到source库的main分支
+Push Changes to the Remote Source Repository on the main Branch:
 git push source main
