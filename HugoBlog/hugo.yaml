@@ -20,7 +20,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 0.126.3
-          # 是否启用 hugo extend
+          # hugo extend or not
           extended: false
 
       - name: Build
@@ -29,9 +29,9 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }} # 该项适用于发布到源码相同repo的情况，不能用于发布到其他repo
+          # github_token: ${{ secrets.GITHUB_TOKEN }} # For publishing to the same repository as the source, not for a different repository
           personal_token: ${{ secrets.ACTION_ACCESS_TOKEN }}
-          external_repository: <用户名>/<用户名>.github.io # 指定目标仓库
+          external_repository: <Github-user-name>/<Github-user-name>.github.io # Set the target repository
           publish_dir: ./public
-          publish_branch: main # 指定目标分支
-          cname: xxx.com # 如果你有自定义域名
+          publish_branch: main # Set the target branch
+          cname: xxx.com # If you have a custom domain
