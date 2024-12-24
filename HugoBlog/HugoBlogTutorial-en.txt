@@ -21,7 +21,7 @@ git clone https://github.com/g1eny0ung/hugo-theme-dream.git dream
 My Theme:
 git submodule add https://github.com/cycinter/hugo-theme-dream.git themes/dream
 
-Configure config.toml:
+Configure hugo.toml:
 theme = 'dream'
 
 Preview the Site:
